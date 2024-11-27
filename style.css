@@ -1,0 +1,29 @@
+h1, p {
+    text-align: center;
+}
+
+.nextpg {
+    text-align: center;
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 20px solid white;
+    border-right: 30px solid black;
+    border-bottom: 0px;
+}
+
+.arrow:hover {
+    border-left: 40px solid black;
+    border-top: 30px solid white;
+    border-bottom: 30px solid white;
+    border-right: 0px;
+
+}
+
+body {
+    background-image: url(Images/acell.avif);
+}
