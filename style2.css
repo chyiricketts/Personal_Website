@@ -1,0 +1,98 @@
+h1, p {
+    text-align: center;
+    /* font-family: Georgia, serif; */
+}
+
+.nextpg {
+    text-align: center;
+}
+
+
+.arrow:hover {
+    border-left: 40px solid black;
+    border-top: 30px solid white;
+    border-bottom: 30px solid white;
+    border-right: 0px;
+
+}
+
+body {
+    height: 100vh; /*to cover viewport fully, position images at the bottom half*/
+    overflow: hidden; /* Disable scrolling */
+
+    background-image: url(Images/background_cell_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    animation: none;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0 0;
+    position: center bottom;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.bottom_center {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+}
+
+/* media queries
+@media (max-width: 600px) {
+ body {
+}
+ Will only be applied when the media query is satisfied*/
+
+.fixedimg img {
+    position: fixed;
+    left: 30%;
+    height: 10%;
+    width: auto;
+}
+
+#m1 img{
+    top: 30%;
+    animation: moveUpDown 5s ease-in-out infinite;
+}
+
+#m2 img {
+    top: 60%;
+    animation: moveUpDown2 5s ease-in-out infinite;
+
+}
+
+
+
+@keyframes moveUpDown {
+    0% {
+        top: 30%; /* Image at the top */
+    }
+    50% {
+        top: 20%; /* Image moves to the bottom */
+    }
+    100% {
+        top: 30%; /* Image at the top */
+    }
+}
+
+@keyframes moveUpDown2 {
+    0% {
+        top: 60%; /* Start at 60% */
+    }
+    50% {
+        top: calc(60% + 10%); /* Move down by 10% (i.e., to 70%) */
+    }
+    100% {
+        top: 60%; /* Return to 60% */
+    }
+}

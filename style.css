@@ -64,3 +64,9 @@ button {
     transform: translateX(-50%);
     border: none;
 }
+
+/* media queries
+@media (max-width: 600px) {
+ body {
+}
+ Will only be applied when the media query is satisfied*/
