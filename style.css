@@ -1,72 +1,71 @@
-h1, p {
-    text-align: center;
-    /* font-family: Georgia, serif; */
-}
-
-.nextpg {
-    text-align: center;
-}
-
-
-.arrow:hover {
-    border-left: 40px solid black;
-    border-top: 30px solid white;
-    border-bottom: 30px solid white;
-    border-right: 0px;
-
-}
-
 body {
     height: 100vh; /*to cover viewport fully, position images at the bottom half*/
     overflow: hidden; /* Disable scrolling */
 
-    background-image: 
-        url(Images/m1.jpg), /*top left*/
-        url(Images/m2.jpg), /*top right*/
-        url(Images/m3.jpg), /*left center*/
-        url(Images/m4.jpg), /*bottom center*/
-        url(Images/m5.jpg), /*bottom right*/
-        url(Images/background_cell_2.jpg);
-    background-size: 10%,10%,10%,10%,10%, cover;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: 25% 50%, 25% 50%, 25% 50%, 25% 50%, 25% 50%, 0% 0%;
-    animation: moveUpDown 5s ease-in-out infinite, moveUpDown 5s ease-in-out infinite, moveUpDown 5s ease-in-out infinite, moveUpDown 5s ease-in-out infinite, moveUpDown 5s ease-in-out infinite, none;
+    margin: 0;
 }
 
-@keyframes moveUpDown {
-    0% {
-        background-position: 25% 20%, 75% 30%, 25% 80%, 55% 70%, 85% 90%, 0% 0%; /* Image at the top */
-    }
-    50% {
-        background-position: 25% 30%, 75% 20%, 30% 70%, 55% 75%, 80% 88%, 0% 0%; /* Image moves to the bottom */
-    }
-    100% {
-        background-position: 25% 20%, 75% 30%, 25% 80%, 55% 70%, 85% 90%, 0% 0%; /* Image returns to the top */
-    }
+h1 {
+    text-align: center;
+    color: white
 }
 
-button {
-    background: none;
-    border: none;
-    padding: 0 0;
-    position: center bottom;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(Images/molecules.jpeg) center/cover no-repeat;
+    margin: 0;
 }
 
-.button:hover {
-    transform: scale(1.1);
-}
-
-.bottom_center {
+/* Gradient overlay */
+.gradient-overlay {
     position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    margin: 0;
 }
 
-/* media queries
-@media (max-width: 600px) {
- body {
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the element exactly */
+    text-align: center; /* Centers the text horizontally */
+    color: white; /* Optional: Adjust text color */
+    font-size: 2rem; /* Optional: Adjust font size */
+    font-family: Arial, sans-serif; /* Optional: Set a font */
 }
- Will only be applied when the media query is satisfied*/
+
+
+/* Stylish button */
+.enter {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient colors */
+    border: none;
+    border-radius: 30px; /* Rounded edges */
+    color: white;
+    padding: 15px 30px; /* Adjust padding */
+    font-size: 1.2rem; /* Text size */
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect */
+.enter:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb); /* Reverse gradient */
+    transform: scale(1.05); /* Slightly enlarge */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+}
+
+/* Focus effect */
+.enter:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px 3px rgba(37, 117, 252, 0.5); /* Glow effect */
+}
