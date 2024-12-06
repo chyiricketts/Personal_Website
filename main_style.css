@@ -7,15 +7,24 @@ html, body{
     height: 100%;
     /* box-sizing: border-box; Ensures consistent box model behavior */
     /* overflow-x: hidden; Prevents horizontal scrolling */
+    scroll-behavior: smooth; /*fallback for CSS smooth scrolling brow*/
 }
 
 header {
     /* color: white; */
-    color: teal;
+    color: #8D5ABF;
     background-color: black;
     text-align: center;
-    padding: 50px;
-    font-size: 24px;
+    padding: 30px;
+    font-size: 30px;
+    font-family: 'Times New Roman', serif;    
+}
+
+header h2 {
+    color: #8D5ABF;
+    font-size: 45px;
+    padding-top: 50px;
+    font-family: 'Times New Roman', serif;
 }
 
 /*rly fucky right now but it works -- mostly */
@@ -26,28 +35,58 @@ header {
     left: 0;
     width: 150px;
     height: 100%;
-    background-color: teal;
+    background-color: rgb(35, 160, 133);
     color: white;
     padding: 20px;
     display: flex;
     align-items: center;
-    transform: translateX(-100%);
+    transform: translateX(-105%);
     transition: transform 0.3s ease;
+    font-family: 'Times New Roman', serif;
     /* justify-content: center; */
     /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+.navbar li {
+    font-size: 25px;
+    color: black;
+    list-style: none;
 }
 
 .hover-zone {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 150px;
     height: 100%;
 }
 
-.hover-zone:hover + .navbar {
+.navbar.open {
     transform: translateX(0);
 }
+
+.arrow-toggle {
+    position: fixed;
+    top: 50%;
+    left: 20px; /* Adjust this to align it perfectly with the navbar */
+    transform: translateY(-50%);
+    background-color: #8D5ABF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 11; /* Ensure it appears above other content */
+    font-size: 24px;
+    transition: left 0.3s ease;
+}
+
+.arrow-toggle:hover {
+    background-color: #6A4B9E;
+}
+
+
+
+
 
 .section-container {
     display: flex;
@@ -62,21 +101,58 @@ header {
     display: flex;
     /* background-color: aquamarine; */
     color: white;
-    /* align-items: center; */
-    width: 1100px;
+    align-items: center; /*keep?*/
+    /* width: 1100px; */
+    width: 75%;
     height: auto;
     text-align: center;
-    padding: 25px;
+    padding: 45px;
 }
 
+.section img {
+    width: 100%;
+    height: auto;
+}
 
 .section div {
     flex: 1;
     /* background-color: lightblue; */
-    border: 1px solid #ffffff;
-    margin: 20px
+    /* border: 1px solid #ffffff; */
+    margin: 20px;
 }
 
+.section h1 {
+    font-size: 50px;
+    color:#8D5ABF;
+    padding: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+.section p {
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(48, 132, 201);
+    font-family: 'Times New Roman', serif;
+}
+
+.section button {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient colors */
+    border: none;
+    border-radius: 30px; /* Rounded edges */
+    color: white;
+    padding: 15px 30px; /* Adjust padding */
+    font-size: 1.2rem; /* Text size */
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.sm-section p {
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+}
 
 img {
     max-width: 100%; /* Ensures the image doesn't overflow the column */
@@ -84,17 +160,15 @@ img {
     object-fit: contain; /* Ensures the image fills the container without distortion */
 }
 
-
- /* deosnt work */
-hr {
-    border: none; /* Remove default border */
-    height: 4px; /* Make it thicker */
-    background-color: rgb(34, 255, 0); /* High contrast color */
-    margin: 20px 0; /* Add spacing around */
-}
-
 footer {
     background-color: teal;
     padding: 50px;
     text-align: center;
+    color: white;
+}
+
+
+.icon {
+    color: white;
+    padding: 0.5rem;
 }
