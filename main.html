@@ -17,17 +17,30 @@
     <div class="hover-zone"></div>
     <div class = "navbar">
         <ul>
-            <li>
-                <a href = "index.html">Return to previous page</a>
-            </li>
+            <button class = "li-container" onclick = "window.location.href='index.html'">
+                <li>Return to Home</li>    
+            </button>
             <br>
-            <li>Di Talia Lab</li>
-            <li>Huang Lab</li>
-            <li>Fraticelli Lab</li>
-            <li>Bagnat Lab</li>
-            <li>Download my Resume</li>
+            <button class = "li-container">
+                <li>Di Talia Lab</li>
+            </button>
+            <button class = "li-container">
+                <li>Huang Lab</li>
+            </button>
+            <button class = "li-container">
+                <li>Fraticelli Lab</li>
+            </button>
+            <button class = "li-container">
+                <li>Bagnat Lab</li>
+            </button>
+            <button class = "li-container">
+                <li>Data Visualization</li>
+            </button>
             <br>
-            <li>Data Analysis</li>
+            <button class = "li-container" onclick="window.open('Images/Resume.pdf', '_blank')">
+                <li>Download my Resume</li>
+            </button>
+            <br>
         </ul>
     </div>
     <div class="arrow-toggle">&#9654;</div> <!-- Left arrow -->
@@ -98,6 +111,21 @@
     </div>
 
     <footer>
+        <h1>Connect With Me!</h1>
+        <div class = "icon-container">
+            <button>
+                <img src = "Images/github.svg">
+            </button>
+            <button>
+                <img src = "Images/mail.svg">
+            </button>
+            <button>
+                <img src = "Images/facebook.svg">
+            </button>
+            <button>
+                <img src = "Images/linkedin.svg">
+            </button>
+        </div>
         <p>@Chyi Ricketts</p>
     </footer>
 

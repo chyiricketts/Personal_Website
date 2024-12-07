@@ -7,7 +7,9 @@ html, body{
     height: 100%;
     /* box-sizing: border-box; Ensures consistent box model behavior */
     /* overflow-x: hidden; Prevents horizontal scrolling */
-    scroll-behavior: smooth; /*fallback for CSS smooth scrolling brow*/
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
 header {
@@ -27,7 +29,6 @@ header h2 {
     font-family: 'Times New Roman', serif;
 }
 
-/*rly fucky right now but it works -- mostly */
 .navbar {
     /* position: sticky; */
     position: fixed;
@@ -41,24 +42,58 @@ header h2 {
     display: flex;
     align-items: center;
     transform: translateX(-105%);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     font-family: 'Times New Roman', serif;
-    /* justify-content: center; */
+    z-index: 11;
+    justify-content: left;
+    text-align: left;
     /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
 }
 
-.navbar li {
-    font-size: 25px;
+.li-container {
+    background-color: rgb(35, 160, 133);
     color: black;
+    margin: 10px auto; /* Center horizontally */
+    width: 100%;
+    padding: 20px; /* Add spacing inside the container */
+    border-radius: 15px; /* Make the corners rounded */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    height: 20%;
+
+    display: flex; /* To center align list items inside buttons */
+    justify-content: center; /* Horizontally center list content */
+    align-items: center; /* Vertically center list content */
+    border: none; /* Remove default button border */
+    text-align: center;
+    cursor: pointer; /* Add a pointer cursor for buttons */
+    font-family: 'Times New Roman', serif;
+}
+
+button.li-container {
+    appearance: none; /* Remove default styles for modern browsers */
+    -webkit-appearance: none; /* Safari-specific */
+}
+
+
+
+.li-container:hover {
+    background-color: black;
+    color: #8D5ABF;
+    transition: all 0.5s ease;
+}
+
+.navbar li {
+    font-size: 20px;
     list-style: none;
 }
 
 .hover-zone {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 20px;
     height: 100%;
+    z-index: 10;
 }
 
 .navbar.open {
@@ -68,14 +103,14 @@ header h2 {
 .arrow-toggle {
     position: fixed;
     top: 50%;
-    left: 20px; /* Adjust this to align it perfectly with the navbar */
+    left: 0px; /* Adjust this to align it perfectly with the navbar */
     transform: translateY(-50%);
     background-color: #8D5ABF;
     color: white;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 11; /* Ensure it appears above other content */
+    z-index: 9; /* Ensure it appears above other content */
     font-size: 24px;
     transition: left 0.3s ease;
 }
@@ -83,9 +118,6 @@ header h2 {
 .arrow-toggle:hover {
     background-color: #6A4B9E;
 }
-
-
-
 
 
 .section-container {
@@ -136,13 +168,14 @@ header h2 {
 }
 
 .section button {
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient colors */
+    background: linear-gradient(to right, #8D5ABF, rgb(48, 132, 201)); /* Gradient colors */
     border: none;
     border-radius: 30px; /* Rounded edges */
     color: white;
     padding: 15px 30px; /* Adjust padding */
     font-size: 1.2rem; /* Text size */
     font-weight: bold;
+    font-family: 'Times New Roman', serif;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
@@ -160,15 +193,33 @@ img {
     object-fit: contain; /* Ensures the image fills the container without distortion */
 }
 
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Evenly space the icons */
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+.icon-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.icon-container button img {
+    width: 80px; /* Size of the icon */
+    height: 80px;
+}
+
 footer {
     background-color: teal;
     padding: 50px;
     text-align: center;
-    color: white;
+    color: black;
 }
 
-
-.icon {
-    color: white;
-    padding: 0.5rem;
+footer p {
+    font-size: 20px;
 }
