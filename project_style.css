@@ -7,40 +7,32 @@ html, body{
     height: 100%;
     /* box-sizing: border-box; Ensures consistent box model behavior */
     /* overflow-x: hidden; Prevents horizontal scrolling */
-    scroll-behavior: smooth; /*fallback for CSS smooth scrolling brow*/
-    background-color: black;
+    /* background-color: black; */
+}
+
+body {
     color: white;
     text-align: center;
+    background: linear-gradient(to bottom, #8D5ABF, black); /* Linear gradient from left to right */
+    background-attachment: fixed;
+    font-family: 'Varela Round';
 }
 
 header {
-    /* color: white; */
-    color: #8D5ABF;
-    background-color: black;
+    color: rgb(44, 223, 184);
     text-align: center;
     padding: 30px;
     font-size: 30px;
-    font-family: 'Times New Roman', serif;    
 }
 
 header h2 {
     color: #8D5ABF;
     font-size: 45px;
     padding-top: 50px;
-    font-family: 'Times New Roman', serif;
-}
-
-
-footer {
-    background-color: teal;
-    padding: 50px;
-    text-align: center;
-    color: white;
 }
 
 .img-row {
     display: flex;
-    background-color: black;
     flex-direction: row;  /* Change to row for horizontal layout */
     align-items: center;
     justify-content: space-between; /* Ensures the images are spaced evenly */
@@ -55,23 +47,28 @@ footer {
 }
 
 .return-button {
-    background: linear-gradient(to right, #8D5ABF, rgb(48, 132, 201)); /* Gradient colors */
-    border: none;
-    border-radius: 30px; /* Rounded edges */
-    color: white;
-    padding: 15px 30px; /* Adjust padding */
-    font-size: 1.2rem; /* Text size */
+    background: linear-gradient(90deg, #8D5ABF, rgb(44, 223, 184));
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 30px;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-family: 'Times New Roman', serif;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 
     top: 6%;
     left: 3%;
     position: fixed;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
+
+.return-button:hover {
+    border: 3px solid black;
+}
+
 
 .text-container {
     display: flex;
@@ -80,7 +77,20 @@ footer {
     font-size: 20px;
     padding-left: 10%;
     padding-right: 10%;
-    }
+}
+
+.graph-container {
+    display: flex;
+    direction: row;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.graph-container img {
+    padding: 15px;
+    width: 35%
+}
 
 .icon-container {
     display: flex;
@@ -103,7 +113,7 @@ footer {
 }
 
 footer {
-    background-color: teal;
+    background-color: rgb(44, 223, 184);
     padding: 50px;
     text-align: center;
     color: black;

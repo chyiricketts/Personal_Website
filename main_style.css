@@ -1,19 +1,16 @@
 * {
-    margin: 0;  /* Removes margin for all elements */
-    padding: 0; /* Removes padding for all elements */
+    margin: 0;
+    padding: 0;
 }
 
 html, body{
     height: 100%;
-    /* box-sizing: border-box; Ensures consistent box model behavior */
-    /* overflow-x: hidden; Prevents horizontal scrolling */
-    /* background-color: black; */
 }
 
 body {
     color: white;
     text-align: center;
-    background: linear-gradient(to bottom, #8D5ABF, black); /* Linear gradient from left to right */
+    background: linear-gradient(to bottom, #8D5ABF, black);
     background-attachment: fixed;
     font-family: 'Varela Round';
 }
@@ -27,7 +24,7 @@ header {
 }
 
 header h2 {
-    font-size: 45px;
+    font-size: 80px;
     padding-top: 50px;
 }
 
@@ -45,34 +42,32 @@ header h2 {
     align-items: center;
     transform: translateX(-105%);
     transition: transform 0.5s ease;
-    font-family: 'Times New Roman', serif;
     z-index: 11;
     justify-content: left;
     text-align: left;
-    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
 }
 
 .li-container {
     background-color: rgb(44, 223, 184);
     color: black;
-    margin: 10px auto; /* Center horizontally */
+    margin: 10px auto;
     width: 100%;
-    padding: 20px; /* Add spacing inside the container */
-    border-radius: 15px; /* Make the corners rounded */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 20%;
 
-    display: flex; /* To center align list items inside buttons */
-    justify-content: center; /* Horizontally center list content */
-    align-items: center; /* Vertically center list content */
-    border: none; /* Remove default button border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
     text-align: center;
-    cursor: pointer; /* Add a pointer cursor for buttons */
+    cursor: pointer;
 }
 
 button.li-container {
-    appearance: none; /* Remove default styles for modern browsers */
-    -webkit-appearance: none; /* Safari-specific */
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 
@@ -104,14 +99,14 @@ button.li-container {
 .arrow-toggle {
     position: fixed;
     top: 50%;
-    left: 0px; /* Adjust this to align it perfectly with the navbar */
+    left: 0px;
     transform: translateY(-50%);
     background-color: #8D5ABF;
     color: black;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 9; /* Ensure it appears above other content */
+    z-index: 9;
     font-size: 24px;
     transition: left 0.3s ease;
 }
@@ -136,6 +131,11 @@ button.li-container {
     height: auto;
     text-align: center;
     padding: 45px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .section img {
@@ -173,7 +173,6 @@ button.li-container {
     padding: 15px 30px;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Times New Roman', serif;
     text-transform: uppercase;
     cursor: pointer;
 
@@ -187,19 +186,18 @@ button.li-container {
 
 .sm-section p {
     font-size: 20px;
-    font-family: 'Times New Roman', serif;
 }
 
 img {
-    max-width: 100%; /* Ensures the image doesn't overflow the column */
-    height: auto;    /* Keeps the aspect ratio intact */
-    object-fit: contain; /* Ensures the image fills the container without distortion */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; 
 }
 
 .icon-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; /* Evenly space the icons */
+    justify-content: space-evenly;
     padding-left: 35%;
     padding-right: 35%;
 }
@@ -212,7 +210,7 @@ img {
 }
 
 .icon-container button img {
-    width: 80px; /* Size of the icon */
+    width: 80px;
     height: 80px;
 }
 
