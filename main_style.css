@@ -7,26 +7,28 @@ html, body{
     height: 100%;
     /* box-sizing: border-box; Ensures consistent box model behavior */
     /* overflow-x: hidden; Prevents horizontal scrolling */
-    background-color: black;
+    /* background-color: black; */
+}
+
+body {
     color: white;
     text-align: center;
+    background: linear-gradient(to bottom, #8D5ABF, black); /* Linear gradient from left to right */
+    background-attachment: fixed;
+    font-family: 'Varela Round';
 }
 
 header {
     /* color: white; */
-    color: #8D5ABF;
-    background-color: black;
+    color: rgb(44, 223, 184);
     text-align: center;
     padding: 30px;
     font-size: 30px;
-    font-family: 'Times New Roman', serif;    
 }
 
 header h2 {
-    color: #8D5ABF;
     font-size: 45px;
     padding-top: 50px;
-    font-family: 'Times New Roman', serif;
 }
 
 .navbar {
@@ -36,7 +38,7 @@ header h2 {
     left: 0;
     width: 150px;
     height: 100%;
-    background-color: rgb(35, 160, 133);
+    background-color: rgb(44, 223, 184);
     color: white;
     padding: 20px;
     display: flex;
@@ -51,7 +53,7 @@ header h2 {
 }
 
 .li-container {
-    background-color: rgb(35, 160, 133);
+    background-color: rgb(44, 223, 184);
     color: black;
     margin: 10px auto; /* Center horizontally */
     width: 100%;
@@ -66,7 +68,6 @@ header h2 {
     border: none; /* Remove default button border */
     text-align: center;
     cursor: pointer; /* Add a pointer cursor for buttons */
-    font-family: 'Times New Roman', serif;
 }
 
 button.li-container {
@@ -106,7 +107,7 @@ button.li-container {
     left: 0px; /* Adjust this to align it perfectly with the navbar */
     transform: translateY(-50%);
     background-color: #8D5ABF;
-    color: white;
+    color: black;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
@@ -122,8 +123,6 @@ button.li-container {
 
 .section-container {
     display: flex;
-    /* height: 100vh; */
-    background-color: black;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -131,10 +130,8 @@ button.li-container {
 
 .section {
     display: flex;
-    /* background-color: aquamarine; */
     color: white;
-    align-items: center; /*keep?*/
-    /* width: 1100px; */
+    align-items: center;
     width: 75%;
     height: auto;
     text-align: center;
@@ -144,6 +141,7 @@ button.li-container {
 .section img {
     width: 100%;
     height: auto;
+    border-radius: 30px;
 }
 
 .section div {
@@ -155,31 +153,36 @@ button.li-container {
 
 .section h1 {
     font-size: 50px;
-    color:#8D5ABF;
+    color:rgb(44, 223, 184);
     padding: 15px;
-    font-family: 'Times New Roman', serif;
 }
 
 .section p {
     font-size: 30px;
     padding: 10px;
-    color: rgb(48, 132, 201);
-    font-family: 'Times New Roman', serif;
+    color: rgb(44, 223, 184);
 }
 
 .section button {
-    background: linear-gradient(to right, #8D5ABF, rgb(48, 132, 201)); /* Gradient colors */
-    border: none;
-    border-radius: 30px; /* Rounded edges */
-    color: white;
-    padding: 15px 30px; /* Adjust padding */
-    font-size: 1.2rem; /* Text size */
+    background: linear-gradient(90deg, #8D5ABF, rgb(44, 223, 184));
+    border: 3px solid transparent;
+    border-radius: 30px;
+    color: black;
+    background-clip: padding-box;
+
+    padding: 15px 30px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'Times New Roman', serif;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.section button:hover {
+    border: 3px solid black;
 }
 
 .sm-section p {
@@ -214,7 +217,7 @@ img {
 }
 
 footer {
-    background-color: teal;
+    background-color: rgb(44, 223, 184);
     padding: 50px;
     text-align: center;
     color: black;
