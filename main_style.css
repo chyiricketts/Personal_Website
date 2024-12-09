@@ -20,13 +20,13 @@ header {
     /* color: white; */
     color: rgb(44, 223, 184);
     text-align: center;
-    padding: 30px;
-    font-size: 30px;
+    padding: 1.953vw;
+    font-size: 1.953vw;
 }
 
 header h2 {
-    font-size: 80px;
-    padding-top: 50px;
+    font-size: 5.208vw;
+    padding-top: 3.255vw;
 }
 
 /*Navigation Bar*/
@@ -79,7 +79,7 @@ button.li-container {
 }
 
 .navbar li {
-    font-size: 20px;
+    font-size: 1.302vw;
     list-style: none;
 }
 
@@ -99,16 +99,17 @@ button.li-container {
 .arrow-toggle {
     position: fixed;
     top: 50%;
-    left: 0px;
+    left: 0;
     transform: translateY(-50%);
     background-color: #8D5ABF;
     color: black;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 9;
-    font-size: 24px;
+    z-index: 11;
+    font-size: 1.563vw;
     transition: left 0.3s ease;
+    cursor: pointer;
 }
 
 .arrow-toggle:hover {
@@ -153,13 +154,13 @@ a {
 }
 
 .section h1 {
-    font-size: 50px;
+    font-size: 3.255vw;
     color:rgb(44, 223, 184);
     padding: 15px;
 }
 
 .section p {
-    font-size: 30px;
+    font-size: 1.953vw;
     padding: 10px;
     color: rgb(44, 223, 184);
 }
@@ -172,7 +173,7 @@ a {
     background-clip: padding-box;
 
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 1.302vw;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -186,7 +187,7 @@ a {
 }
 
 .sm-section p {
-    font-size: 20px;
+    font-size: 1.302vw;
 }
 
 img {
@@ -223,6 +224,72 @@ footer {
     color: black;
 }
 
+footer h1 {
+    font-size: 2.083vw;
+}
+
 footer p {
-    font-size: 20px;
+    font-size: 1.302vw;
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 8vw;
+    }
+
+    header h2 {
+        font-size: 12vw;
+    }
+
+    .navbar li {
+        font-size: 4vw;
+    }
+
+    .section h1 {
+        font-size: 8vw;
+    }
+
+    .section p {
+        font-size: 4vw;
+    }
+
+    .section button {
+        font-size: 3vw;
+    }
+
+    .sm-section p {
+        font-size: 4vw;
+    }
+
+    footer h1 {
+        font-size: 6vw;
+    }
+    
+    footer p {
+        font-size: 4vw;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .section img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+    }
+    
+    .section div {
+        flex: 1;
+        /* background-color: lightblue; */
+        /* border: 1px solid #ffffff; */
+        margin: 20px;
+    }
+    
+
 }
