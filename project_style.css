@@ -95,7 +95,7 @@ header h2 {
 .icon-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; /* Evenly space the icons */
+    justify-content: space-evenly;
     padding-left: 35%;
     padding-right: 35%;
 }
@@ -108,7 +108,7 @@ header h2 {
 }
 
 .icon-container button img {
-    width: 80px; /* Size of the icon */
+    width: 80px;
     height: 80px;
 }
 
@@ -121,4 +121,48 @@ footer {
 
 footer p {
     font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw;
+        padding-top: 100px;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    button {
+        font-size: 4vw;
+        width: 50%;
+    }
+
+    .img-row {
+        padding: 5px;
+    }
+    
+    .img-row img {
+        width: 25%;
+        padding: 5px;
+    }
+
+    .icon-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .icon-container button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+    
+    .icon-container button img {
+        width: 40px;
+        height: 40px;
+    }
+    
 }
