@@ -4,13 +4,9 @@
 }
 
 body {
-    height: 100vh; /*to cover viewport fully, position images at the bottom half*/
-    overflow: hidden; /* Disable scrolling */
+    height: 100vh;
+    overflow: hidden;
     background-color: black;
-
-   /* display: flex; 
-    justify-content: center;
-    align-items: center; */
 }
 
 h1, p{
@@ -18,14 +14,15 @@ h1, p{
     color: rgb(44, 223, 184);
     top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the h1 */
-    /* font-size: 5rem; */
-    font-size: 500%;
+    transform: translate(-50%, -50%);
+    /* font-size: 80px; */
+    /* font-size: 500%; */
+    font-size: 5.208vw;
     font-family: 'Varela Round';
 }
 
 p {
-    font-size: 1.875rem;
+    font-size: 1.953vw;
     top: 52.5%;
     text-align: center;
     text-shadow: none;
@@ -42,7 +39,7 @@ button {
     background-clip: padding-box;
     color: black;
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 1.302vw;
     font-weight: bold;
 
     border: 2px solid transparent;
@@ -51,6 +48,9 @@ button {
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s ease;
+
+    width: 18%;
+    height: auto;
 }
 
 button:hover {

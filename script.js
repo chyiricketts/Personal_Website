@@ -1,4 +1,8 @@
-
+/*
+A good portion of this code was borrowed from https://www.kevinmbeaulieu.com/
+I really like how they used javascript to create this type of animation and I wanted to use the design.
+I modified his code to cover my entire landing page and create a color gradient.
+*/
         /*
          * On page load
          */
