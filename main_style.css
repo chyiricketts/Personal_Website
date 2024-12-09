@@ -96,11 +96,18 @@ button.li-container {
     transform: translateX(0);
 }
 
+.navbar.open .arrow-toggle {
+    left: 150px;
+    transform: translateY(-50%) translateX(-20px); /* Optional slight adjustment */
+    rotate: 180deg; /* Optional arrow flip */
+}
+
 .arrow-toggle {
     position: fixed;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    transition: transform 0.5s ease, left 0.5s ease;
     background-color: #8D5ABF;
     color: black;
     padding: 5px;
@@ -110,6 +117,11 @@ button.li-container {
     font-size: 1.563vw;
     transition: left 0.3s ease;
     cursor: pointer;
+}
+
+.arrow-toggle.active {
+    left: 150px;
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .arrow-toggle:hover {
@@ -290,6 +302,20 @@ footer p {
         /* border: 1px solid #ffffff; */
         margin: 20px;
     }
+
+    /* .navbar {
+        width: 40px;
+    }
+
+    .navbar.open .arrow-toggle {
+        left: 40px;
+    }
+
+    .arrow-toggle.active {
+        left: 40px;
+    } */
+
+
     
 
 }
