@@ -302,4 +302,22 @@ footer p {
         /* border: 1px solid #ffffff; */
         margin: 20px;
     }
+
+    .icon-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .icon-container button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+    
+    .icon-container button img {
+        width: 40px;
+        height: 40px;
+    }
+    
 }
