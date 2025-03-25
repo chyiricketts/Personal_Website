@@ -118,7 +118,7 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   color: var(--primary);
-  min-height: 400vh;
+  min-height: 300vh;
 }
 
 .timeline ol {
@@ -151,9 +151,13 @@ body {
 
 .timeline ol li .time-wrapper {
   position: relative;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   line-height: 0.9;
+}
+
+.timeline ol li .time-wrapper small {
+    font-size: 1.5rem;
 }
 
 .timeline ol li .time-wrapper::before,
