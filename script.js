@@ -49,7 +49,7 @@ I modified his code to cover my entire landing page and create a color gradient.
 
             let alpha = 0.5 - h.depth * h.depth;
             // context.strokeStyle = "rgba(147, 148, 152, " + alpha + ")";
-            context.strokeStyle = "rgba(141, 90, 191, " + alpha + ")";
+            context.strokeStyle = "rgba(155, 170, 207, " + alpha + ")";
             context.lineWidth = 3; // edited to make the shapes thicker
             context.stroke();
         }

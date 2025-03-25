@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root {
+    --primary-light: #8abdff;
+    --primary: #7eb3d6;
+    --primary-dark: #5b0eeb;
+  
+    --white: #ffffff;
+    --greyLight-1: #e4ebf5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+  
+    --shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), 
+              -0.2rem -0.2rem 0.5rem var(--white);
+    --inner-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), 
+                    inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: var(--greyLight-1);
+    overflow-x: hidden;
+    width: 100%;
+  
+    @media screen and (min-width: 900px) {
+      font-size: 75%;
+    }
+}
+
+.center-all {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.title-text {
+    position: absolute;
+    font-family: 'Varela Round';
+    text-align: center;
+    top: 200px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.title-text h1 {
+    font-size: 50px;
+}
+
+.section {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --dark-blue: #227c9d;
+  --turquoise: #17c3b2;
+  --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  font: normal 16px/1.5 "Inter", sans-serif;
+  padding-bottom: 50px;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline {
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  color: var(--primary);
+  min-height: 400vh;
+}
+
+.timeline ol {
+  position: absolute; /*changed from relative*/
+  left: 50%;
+  list-style: none;
+}
+
+.timeline ol::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--greyDark);
+}
+
+.timeline ol li:nth-child(odd) .item-inner {
+  padding: 20px 180px;
+  margin-bottom: 8vh;
+}
+
+.timeline ol li:nth-child(even) .item-inner {
+    padding: 20px 180px;
+    margin-bottom: 8vh;
+    transform: translateX(-100%);
+    text-align: right;
+  }
+
+.timeline ol li .time-wrapper {
+  position: relative;
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 0.9;
+}
+
+.timeline ol li .time-wrapper::before,
+.timeline ol li .time-wrapper::after {
+  content: "";
+  position: absolute;
+  background: var(--greyDark);
+}
+
+.timeline ol li:nth-child(odd) .time-wrapper::before {
+  top: 50%;
+  left: -180px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 3px;
+  transition: width 0.8s linear;
+}
+
+.timeline ol li:nth-child(odd) .time-wrapper::after {
+  top: calc(50% - 8px);
+  left: -60px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: scale(0);
+  transform-origin: left center;
+  transition: all 0.4s linear;
+}
+
+.timeline ol li:nth-child(even) .time-wrapper::before {
+    top: 50%;
+    right: -180px;
+    left: auto;
+    transform: translateY(-50%);
+    width: 0;
+    height: 3px;
+    transition: width 0.8s linear;
+}
+  
+.timeline ol li:nth-child(even) .time-wrapper::after {
+    top: calc(50% - 8px);
+    right: -60px;
+    left: auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: scale(0);
+    transform-origin: right center;
+    transition: all 0.4s linear;
+}
+
+.timeline ol li time,
+.timeline ol li .details > * {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.timeline ol li time {
+  display: inline-block;
+  transform: translateY(-30px);
+}
+.timeline ol li .details > * {
+  transform: translateY(30px);
+}
+
+.timeline ol li .details h3 {
+  font-size: 2rem;
+  line-height: 1;
+  margin: 15px 0;
+}
+
+/* ANIMATION STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ol li.in-view .time-wrapper::before {
+  width: 120px;
+}
+
+.timeline ol li.in-view .time-wrapper::after {
+  transition-delay: 0.8s;
+  transform: scale(1.5);
+}
+
+.timeline ol li.in-view time,
+.timeline ol li.in-view .details > * {
+  opacity: 1;
+  transform: none;
+}
+
+.timeline ol li.in-view time {
+  transition-delay: 1.3s;
+}
+
+.timeline ol li.in-view .details h3 {
+  transition-delay: 1.5s;
+}
+
+.timeline ol li.in-view .details p {
+  transition-delay: 1.7s;
+}
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 700px) {
+  .timeline ol li .item-inner {
+    padding: 20px 40px;
+  }
+
+  .timeline ol li .time-wrapper::before {
+    display: none;
+  }
+
+  .timeline ol li .time-wrapper::after {
+    left: -45px;
+    transform-origin: center;
+  }
+
+  .timeline ol li.in-view .time-wrapper::after {
+    transition-delay: 0s;
+  }
+
+  .timeline ol li.in-view time {
+    transition-delay: 0.5s;
+  }
+
+  .timeline ol li.in-view .details h3 {
+    transition-delay: 0.7s;
+  }
+
+  .timeline ol li.in-view .details p {
+    transition-delay: 0.9s;
+  }
+}
+
+
+/*Footer Styling*/
+
+footer {
+    width: 100%;
+    background: var(--greyLight-1); /* Match existing background */
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer h1 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.icon-container button img {
+    width: 60px;
+    height: 60px;
+    filter: grayscale(30%); /* Slightly muted color */
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.icon-container button:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+footer p {
+    font-size: 14px;
+    color: #666;
+    margin: 0.2rem 0;
+}
