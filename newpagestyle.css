@@ -36,7 +36,7 @@ html {
     }
 }
 
-/* Navigation Bar */
+/* Navigation Bar - NEED TO FIX THIS. I CHANGED THE SECTION NAMES*/
 
 /* Base nav */
 .navigation {
@@ -45,6 +45,9 @@ html {
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 10;
+
+  box-shadow: 0 0 20px rgba(120, 200, 255, 0.08);
+  border-bottom: 1px solid rgba(37, 76, 103, 0.4);
 }
 
 /* Layout */
@@ -52,31 +55,75 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
+
+  width: 100%;
   height: 70px;
+
+  padding: 0 32px;
+
+  box-sizing: border-box;
+}
+
+/* Icons */
+.nav-icon {
+  width: 22px;
+  height: 22px;
+
+  opacity: 0.75;
+  transition: 0.2s ease;
+
+  filter: brightness(0) invert(1);
+}
+
+.nav-right a:hover .nav-icon {
+  opacity: 1;
+
+  transform: scale(1.1);
+
+  filter:
+    brightness(0)
+    invert(1)
+    drop-shadow(0 0 6px rgba(120,200,255,0.7));
 }
 
 /* Links */
-.nav-list {
-  list-style: none;
+.nav-left,
+.nav-right {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-.nav-list li {
+.nav-left {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left li, .nav-right li {
   position: relative;
 }
 
-.nav-list a {
+.nav-left a,
+.nav-right a {
   color: white;
   text-decoration: none;
   padding: 10px;
+  transition: 0.2s;
 }
 
 /* Hover effect */
-.nav-list a:hover {
+.nav-left a:hover,
+.nav-right a:hover {
   color: #7eb3d6;
+}
+
+.nav-left li {
+  position: relative;
+}
+
+.nav-left li:hover .nav-dropdown {
+  display: block;
 }
 
 /* Dropdown hidden */
@@ -92,12 +139,6 @@ html {
   padding: 10px 0;
 }
 
-/* Show dropdown on hover */
-.nav-list li:hover .nav-dropdown {
-  display: block;
-}
-
-/* Dropdown items */
 .nav-dropdown li {
   display: block;
 }
@@ -107,32 +148,56 @@ html {
   padding: 10px 15px;
 }
 
-/* Hover highlight */
 .nav-dropdown a:hover {
   background: rgba(126, 179, 214, 0.2);
+}
+
+.nav-mobile {
+  display: none;
+
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* Mobile */
 @media (max-width: 800px) {
 
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: rgba(20,20,25,0.95);
-    position: absolute;
-    top: 70px;
-    left: 0;
-  }
-
   .nav-mobile {
     display: block;
   }
 
-  .nav-list.active {
+  .nav-container {
+    position: relative;
+  }
+
+  .nav-left {
+    display: none;
+
+    flex-direction: column;
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(20,20,25,0.95);
+
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .nav-left.active {
+    display: flex;
+  }
+
+  /* KEEP ICONS VISIBLE */
+  .nav-right {
     display: flex;
   }
 }
+
 
 .navigation {
   box-shadow: 0 0 20px rgba(120, 200, 255, 0.08);
@@ -162,7 +227,7 @@ html {
 }
 
 .title-text {
-    font-family: 'Varela Round';
+    font-family: 'Inter', sans-serif;
     text-align: center;
 
     min-height: 30vh;
