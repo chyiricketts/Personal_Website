@@ -100,6 +100,10 @@ html {
   padding: 0;
 }
 
+.nav-left.active {
+  display: flex;
+}
+
 .nav-left li, .nav-right li {
   position: relative;
 }
@@ -186,10 +190,6 @@ html {
 
     padding: 20px 30px;
     box-sizing: border-box;
-  }
-
-  .nav-left.active {
-    display: flex;
   }
 
   /* KEEP ICONS VISIBLE */
