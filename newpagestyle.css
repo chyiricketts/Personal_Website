@@ -6,9 +6,9 @@
 
 :root {
   /* Core theme */
-  --background: #0f1724;
+  --background: #000000;
   --gradient_1: #09111d;
-  --gradient_2: #05080f;
+  --gradient_2: #151d31;
 
   --surface: rgba(20, 20, 25, 0.7);
 
@@ -67,6 +67,8 @@ body {
             var(--gradient_1) 40%,
             var(--gradient_2) 100%
         );
+
+    transition: background 1.5s ease, color 1.5s ease;
 }
 
 
@@ -92,17 +94,32 @@ body {
 
 /* Base nav */
 .navigation {
+
   height: 70px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  transition: transform 0.3s ease;
+
   background: var(--surface);
   backdrop-filter: blur(10px);
-  position: relative;
-  z-index: 10;
 
   box-shadow: var(--border-shadow);
   border-bottom: 1px solid var(--border);
 
-  position: sticky;
-  top: 0px;
+  transition: background 1.5s ease, border-color 1.5s ease;
+
+}
+
+/* hidden state */
+.navigation.nav-hidden {
+  transform: translateY(-100%);
 }
 
 /* Layout */
@@ -128,6 +145,8 @@ body {
   transition: 0.2s ease;
 
   filter: brightness(0) invert(1);
+
+  transition: color 1s ease, filter 1s ease, opacity 1s ease;
 }
 
 .nav-right a:hover .nav-icon,
@@ -139,7 +158,6 @@ body {
   filter:
     brightness(0)
     invert(1)
-    drop-shadow(0 0 6px var(--glow));
 }
 
 /* Links */
@@ -283,7 +301,7 @@ body {
   --background: #ffffff;
   --gradient_1: #d8f4ff;
   --gradient_2: #bfd4ff;
-  --surface: #b2e8ff;
+  --surface: #aed8ea;
 
   --text: #0b1220;
   --muted-text: rgba(11, 18, 32, 0.65);
@@ -341,6 +359,7 @@ body {
     width: 90%;
     max-width: 900px;
 
+    margin-top: 80px;
     padding: 2rem;
 }
 
@@ -406,7 +425,7 @@ body {
   width: 90%;
   max-width: 900px;
 
-  margin: 80px auto;
+  margin: 20px auto;
 }
 
 #about-img {
@@ -453,44 +472,51 @@ body {
 
 /* Resume Section*/
 
-.resume-section {
+.info-section {
   width: 100%;
   background: linear-gradient(
     180deg,
-    var(--background) 0%,
-    var(--gradient_1) 100%
+    var(--gradient_2) 0%,
+    var(--background) 100%
   );
+
   padding: 80px 20px;
   color: var(--muted-text);
+
   position: relative;
   z-index: 2;
 }
 
-.resume-inner {
+.info-inner {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.resume-section h2 {
+.info-section h2 {
   font-size: 32px;
   margin-bottom: 30px;
   letter-spacing: 1px;
   color: var(--text);
 }
 
-.resume-item {
+.info-item {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border-shadow)
 }
 
-.resume-item h3 {
+.info-item h3 {
   font-size: 20px;
   color: var(--text);
   margin-bottom: 5px;
 }
 
-.role-meta {
+.info-item ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.info-meta {
   font-size: 14px;
   opacity: 0.6;
   margin-bottom: 10px;
